@@ -2,7 +2,7 @@
     padding: 60px 5%;
 }
 
-.gift-grid_heading {
+.gift-grid__heading {
     text-align: center;
     font-size: 32px;
     font-weight: 400;
@@ -53,7 +53,7 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 12px;
     }
-    .gift-grid_heading  {
+    .gift-grid__heading  {
         font-size: 24px;
     }
     
@@ -129,7 +129,7 @@
     line-height: 1.5;
 }
 
-.gift-popup__options {
+.gift-popup__option {
     margin-bottom: 20px;
 }
 
