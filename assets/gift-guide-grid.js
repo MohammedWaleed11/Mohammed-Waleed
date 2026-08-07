@@ -1,3 +1,5 @@
+
+
 document.addEventListener('DOMContentLoaded', function () {
   var popup = document.getElementById('gift-popup');
   var popupImage = document.getElementById('gift-popup-image');
@@ -151,4 +153,73 @@ document.addEventListener('DOMContentLoaded', function () {
     var amount = (cents / 100).toFixed(2);
     return amount + '€';
   }
+  addToCartBtn.addEventListener('click', function (e) {
+    e.preventDefault();//prevents the button from refreshing the page
+    var variantId = addToCartBtn.getAttribute('data-variant-id');
+    if (!variantId) {
+        console.error('No variant found. Please select options.');
+        return;     
+    }
+    //Temporarily disable the button to prevent multiple clicks
+    addToCartText.textContent = 'Adding...';
+    addToCartBtn.disabled = true;
+
+    //check if the selected option triggers the specific test rule
+    var isBlack = selectedOptions['Color'] === 'Black';
+    var isMedium = selectedOptions['Size'] === 'Medium' || selectedOptions['Size'] === 'M';
+
+    if (isBlack && isMedium) {
+        // If the selected options match the test rule, redirect to the specific URL
+        fetch('/products/soft-winter-jacket.js')
+            .then(function (response) {
+                if (!response.ok)  throw new Error('Jacket fetch failed');
+                return response.json();
+            })
+            .then(function (jacketProduct) {
+                var jacketVariantId = jacketProduct.variants[0].id;
+
+                //Send BOTH the jacket and the selected variant to the cart
+                sendtoCart([
+                    { id: jacketVariantId, quantity: 1 },
+                    { id: variantId, quantity: 1 }
+                ]);
+            })
+            .catch(function (error) {
+                console.error('Jacket product not found in store. Adding only main item', error);
+                sendtoCart([{ id: variantId, quantity: 1 }]);
+            });
+    } else {
+        // If the selected options do not match the test rule, add only the selected variant to the cart
+        sendtoCart([{ id: variantId, quantity: 1 }]);
+    }
+
+    //Helper function to handle the actual shopify AJAX request to add items to the cart
+    function sendtoCart(itemsArray) {
+        fetch('/cart/add.js', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ items: itemsArray })
+        })
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            //success!
+            addToCartText.textContent = 'Added to cart';
+            
+            //Reset the button after 2 seconds
+            setTimeout(function () {
+                addToCartText.textContent = 'Add to cart';
+                addToCartBtn.disabled = false;
+            }, 2000);
+        })
+        .catch(function (error) {
+            console.error('Error adding to cart:', error);
+            addToCartText.textContent = 'Error. Try again.';
+            addToCartBtn.disabled = false;
+        });
+        }
+    });
 });
