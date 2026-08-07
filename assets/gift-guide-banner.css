@@ -36,6 +36,19 @@
   text-transform: uppercase;
   transition: gap 0.25s ease, background 0.25s ease;
 }
+.gift-banner__image-wrapper {
+  flex: 1 1 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.gift-banner__image--top,
+.gift-banner__image--side {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
 .gift-banner__button:hover {
   gap: 18px;

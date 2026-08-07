@@ -11,17 +11,27 @@
   </div>
 
   <div class="gift-banner__image-wrapper">
-    {% if section.settings.image %}
-      <img
-        src="{{ section.settings.image | image_url: width: 1500 }}"
-        alt="{{ section.settings.image.alt | escape }}"
-        class="gift-banner__image"
-        loading="eager"
-        width="{{ section.settings.image.width }}"
-        height="{{ section.settings.image.height }}"
-      >
-    {% endif %}
-  </div>
+  {% if section.settings.image %}
+    <img
+      src="{{ section.settings.image | image_url: width: 1500 }}"
+      alt="{{ section.settings.image.alt | escape }}"
+      class="gift-banner__image gift-banner__image--top"
+      loading="eager"
+      width="{{ section.settings.image.width }}"
+      height="{{ section.settings.image.height }}"
+    >
+  {% endif %}
+  {% if section.settings.image_side %}
+    <img
+      src="{{ section.settings.image_side | image_url: width: 1500 }}"
+      alt="{{ section.settings.image_side.alt | escape }}"
+      class="gift-banner__image gift-banner__image--side"
+      loading="eager"
+      width="{{ section.settings.image_side.width }}"
+      height="{{ section.settings.image_side.height }}"
+    >
+  {% endif %}
+</div>
 </div>
 
 {% if section.settings.strip_text != blank %}
@@ -40,6 +50,7 @@
       "label": "Heading",
       "default": "The Gift Guide"
     },
+    
     {
       "type": "richtext",
       "id": "description",
@@ -60,8 +71,14 @@
     {
       "type": "image_picker",
       "id": "image",
-      "label": "Banner image"
+      "label": "Top image"
     },
+    {
+      "type": "image_picker",
+      "id": "image_side",
+      "label": "Side image"
+    },
+
     {
       "type": "text",
       "id": "strip_text",
