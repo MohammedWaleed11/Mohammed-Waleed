@@ -24,7 +24,7 @@
   bottom: 60px;
   left: 5%;
   max-width: 480px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.85);
   padding: 20px;
   z-index: 2;
 }
