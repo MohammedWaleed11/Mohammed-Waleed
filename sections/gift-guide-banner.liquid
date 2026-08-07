@@ -1,6 +1,17 @@
-{{ 'gift-guide-banner.css' | asset_url | stylesheet_tag }}
-
 <div class="gift-banner">
+  <div class="gift-banner__image-wrapper">
+    {% if section.settings.image %}
+      <img
+        src="{{ section.settings.image | image_url: width: 1500 }}"
+        alt="{{ section.settings.image.alt | escape }}"
+        class="gift-banner__image"
+        loading="eager"
+        width="{{ section.settings.image.width }}"
+        height="{{ section.settings.image.height }}"
+      >
+    {% endif %}
+  </div>
+
   <div class="gift-banner__content">
     <h1 class="gift-banner__heading">{{ section.settings.heading }}</h1>
     <div class="gift-banner__description">{{ section.settings.description }}</div>
@@ -9,19 +20,6 @@
       <span class="gift-banner__button-arrow">→</span>
     </a>
   </div>
-
-<div class="gift-banner__image-wrapper">
-  {% if section.settings.image %}
-    <img
-      src="{{ section.settings.image | image_url: width: 1500 }}"
-      alt="{{ section.settings.image.alt | escape }}"
-      class="gift-banner__image"
-      loading="eager"
-      width="{{ section.settings.image.width }}"
-      height="{{ section.settings.image.height }}"
-    >
-  {% endif %}
-</div>
 </div>
 
 {% if section.settings.strip_text != blank %}
