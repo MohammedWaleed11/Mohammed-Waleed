@@ -1,5 +1,5 @@
 {{ 'gift-guide-grid.css' | asset_url | stylesheet_tag }}
-
+<script src="{{ 'gift-guide-grid.js' | asset_url}} defer></script>
 <div class="gift-grid">
   <h2 class="gift-grid__heading">{{ section.settings.heading }}</h2>
 
@@ -30,6 +30,34 @@
       {% endif %}
     {% endfor %}
   </div>
+    <div class="gift-popup" id="gift-popup" aria-hidden="true">
+    <div class="gift-popup__overlay" data-popup-close></div>
+    <div class="gift-popup__content" role="dialog" aria-modal="true">
+      <button type="button" class="gift-popup__close" data-popup-close aria-label="Close">×</button>
+
+      <div class="gift-popup__image-wrapper">
+        <img src="" alt="" class="gift-popup__image" id="gift-popup-image">
+      </div>
+
+      <div class="gift-popup__details">
+        <h3 class="gift-popup__title" id="gift-popup-title"></h3>
+        <p class="gift-popup__price" id="gift-popup-price"></p>
+        <div class="gift-popup__description" id="gift-popup-description"></div>
+
+        <div class="gift-popup__option" id="gift-popup-color-wrapper">
+          <p class="gift-popup__option-label">Color</p>
+          <div class="gift-popup__swatches" id="gift-popup-color-swatches"></div>
+        </div>
+
+        <button type="button" class="gift-popup__add-to-cart" id="gift-popup-add-to-cart">
+          <span id="gift-popup-add-to-cart-text">Add to cart</span>
+          <span class="gift-popup__add-to-cart-arrow">→</span>
+        </button>
+      </div>
+    </div>
+  </div>
+     
+         
 </div>
 
 {% schema %}
