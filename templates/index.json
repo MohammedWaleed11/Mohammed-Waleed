@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image_banner": {
@@ -29,33 +38,32 @@
       "settings": {
         "image_overlay_opacity": 40,
         "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
         "image_behavior": "none",
+        "desktop_content_position": "bottom-center",
         "desktop_content_alignment": "center",
+        "show_text_box": false,
         "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
+        "mobile_content_alignment": "center",
         "show_text_below": false
       }
     },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
+        "collection": "all",
+        "products_to_show": 8,
         "title": "Featured products",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
         "columns_desktop": 4,
-        "color_scheme": "scheme-1",
+        "enable_desktop_slider": false,
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "swipe_on_mobile": false,
+        "color_scheme": "scheme-1",
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": true,
@@ -63,13 +71,68 @@
         "show_rating": false,
         "quick_add": "none",
         "columns_mobile": "2",
+        "swipe_on_mobile": false,
         "padding_top": 44,
         "padding_bottom": 36
+      }
+    },
+    "gift_guide_grid_pBCVi6": {
+      "type": "gift-guide-grid",
+      "blocks": {
+        "product_item_iz9EEC": {
+          "type": "product_item",
+          "settings": {
+            "product": "black-leather-bag"
+          }
+        },
+        "product_item_UFFc7f": {
+          "type": "product_item",
+          "settings": {
+            "product": "blue-silk-tuxedo"
+          }
+        },
+        "product_item_cA9LWn": {
+          "type": "product_item",
+          "settings": {
+            "product": "chequered-red-shirt"
+          }
+        },
+        "product_item_Q9P89M": {
+          "type": "product_item",
+          "settings": {
+            "product": "floral-white-top"
+          }
+        },
+        "product_item_yBaAHU": {
+          "type": "product_item",
+          "settings": {
+            "product": "led-high-tops"
+          }
+        },
+        "product_item_8RdhgG": {
+          "type": "product_item",
+          "settings": {
+            "product": "olive-green-jacket"
+          }
+        }
+      },
+      "block_order": [
+        "product_item_iz9EEC",
+        "product_item_UFFc7f",
+        "product_item_cA9LWn",
+        "product_item_Q9P89M",
+        "product_item_yBaAHU",
+        "product_item_8RdhgG"
+      ],
+      "name": "Gift Guide Grid",
+      "settings": {
+        "heading": "Tisso vison in the wild"
       }
     }
   },
   "order": [
     "image_banner",
-    "featured_collection"
+    "featured_collection",
+    "gift_guide_grid_pBCVi6"
   ]
 }
