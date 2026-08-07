@@ -38,13 +38,9 @@
 }
 .gift-banner__image-wrapper {
   flex: 1 1 500px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
 }
 
-.gift-banner__image--top,
-.gift-banner__image--side {
+.gift-banner__image {
   width: 100%;
   height: auto;
   display: block;
