@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (isBlack && isMedium) {
         // If the selected options match the test rule, redirect to the specific URL
-        fetch('/products/soft-winter-jacket.js')
+        fetch('/products/dark-winter-jacket.js')
             .then(function (response) {
                 if (!response.ok)  throw new Error('Jacket fetch failed');
                 return response.json();
