@@ -2,7 +2,7 @@
   position: relative;
   overflow: hidden;
   width: 100%;
-  aspect-ratio: 1200 / 8000;
+  aspect-ratio: 1200 / 800;
 }
 
 .gift-banner__image-wrapper {
