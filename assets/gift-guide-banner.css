@@ -21,11 +21,12 @@
 
 .gift-banner__content {
   position: absolute;
-  top: 62.7%
-  left: 4.65%;
-  max-width: 483px;
-  background: #fff;
+  bottom: 60px;
+  left: 5%;
+  max-width: 480px;
+  background: rgba(255, 255, 255, 0.85);
   padding: 20px;
+  z-index: 2;
 }
 
 .gift-banner__heading {
