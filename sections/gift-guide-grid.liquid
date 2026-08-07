@@ -1,5 +1,5 @@
 {{ 'gift-guide-grid.css' | asset_url | stylesheet_tag }}
-<script src="{{ 'gift-guide-grid.js' | asset_url}} defer></script>
+<script src="{{ 'gift-guide-grid.js' | asset_url}}" defer></script>
 <div class="gift-grid">
   <h2 class="gift-grid__heading">{{ section.settings.heading }}</h2>
 
@@ -47,6 +47,12 @@
         <div class="gift-popup__option" id="gift-popup-color-wrapper">
           <p class="gift-popup__option-label">Color</p>
           <div class="gift-popup__swatches" id="gift-popup-color-swatches"></div>
+        </div>
+        <div class="gift-popup__option" id="gift-popup-size-wrapper">
+            <p class="gift-popup__option-label">Size</p>
+            <select class="gift-popup__size-select" id="gift-popup-size-select">
+                <option value="">Choose your size</option>
+            </select>
         </div>
 
         <button type="button" class="gift-popup__add-to-cart" id="gift-popup-add-to-cart">
