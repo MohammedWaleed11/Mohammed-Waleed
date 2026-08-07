@@ -1,15 +1,21 @@
 .gift-banner {
   position: relative;
   overflow: hidden;
+  width: 100%;
+  aspect-ratio: 1440 / 780;
 }
 
 .gift-banner__image-wrapper {
+  position: absolute;
+  inset: 0;
   width: 100%;
+  height: 100%;
 }
 
 .gift-banner__image {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
@@ -20,6 +26,7 @@
   max-width: 480px;
   background: rgba(255, 255, 255, 0.85);
   padding: 20px;
+  z-index: 2;
 }
 
 .gift-banner__heading {
@@ -73,6 +80,21 @@
 }
 
 @media screen and (max-width: 749px) {
+  .gift-banner {
+    aspect-ratio: auto;
+    height: auto;
+  }
+
+  .gift-banner__image-wrapper {
+    position: static;
+    height: auto;
+  }
+
+  .gift-banner__image {
+    height: auto;
+    object-fit: initial;
+  }
+
   .gift-banner__content {
     position: static;
     background: none;
