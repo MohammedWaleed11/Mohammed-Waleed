@@ -3,6 +3,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap" rel="stylesheet">
 {{ 'gift-guide-banner.css' | asset_url | stylesheet_tag }}
 <div class="gift-banner__topbar">
+  <button type="button" class="gift-banner__topbar-menu" aria-label="Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
   <div class="gift-banner__topbar-brand">{{ section.settings.topbar_brand }}</div>
   <div class="gift-banner__topbar-tagline">{{ section.settings.topbar_tagline }}</div>
   <a href="{{ section.settings.topbar_button_link }}" class="gift-banner__topbar-button">

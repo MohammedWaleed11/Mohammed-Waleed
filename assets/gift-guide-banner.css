@@ -18,9 +18,11 @@
   object-fit: cover;
   display: block;
 }
+
 .gift-banner__description--mobile {
   display: none;
 }
+
 .gift-banner__content {
   position: absolute;
   bottom: 3%;
@@ -85,6 +87,23 @@
   z-index: -1;
 }
 
+.gift-banner__button:hover {
+  gap: 18px;
+  color: #000;
+}
+
+.gift-banner__button:hover::before {
+  width: 100%;
+}
+
+.gift-banner__button-arrow {
+  transition: transform 0.25s ease;
+}
+
+.gift-banner__button:hover .gift-banner__button-arrow {
+  transform: translateX(4px);
+}
+
 .gift-banner__topbar {
   display: flex;
   align-items: center;
@@ -98,8 +117,24 @@
   box-sizing: border-box;
 }
 
-.gift-banner__topbar-tagline {
-  white-space: nowrap;
+.gift-banner__topbar-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 24px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.gift-banner__topbar-menu span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #000;
 }
 
 .gift-banner__topbar-brand {
@@ -117,6 +152,7 @@
   line-height: 13.42px;
   letter-spacing: 0px;
   color: #444;
+  white-space: nowrap;
 }
 
 .gift-banner__topbar-button {
@@ -159,24 +195,6 @@
   width: 100%;
 }
 
-
-.gift-banner__button:hover {
-  gap: 18px;
-  color: #000;
-}
-
-.gift-banner__button:hover::before {
-  width: 100%;
-}
-
-.gift-banner__button-arrow {
-  transition: transform 0.25s ease;
-}
-
-.gift-banner__button:hover .gift-banner__button-arrow {
-  transform: translateX(4px);
-}
-
 .gift-banner__strip {
   font-family: 'Jost', sans-serif;
   font-weight: 400;
@@ -190,6 +208,7 @@
   border-top: 1px solid #eee;
   background: #F5F5F5;
 }
+
 .gift-banner__strip--mobile {
   display: none;
 }
@@ -198,31 +217,31 @@
   .gift-banner {
     aspect-ratio: auto;
     height: auto;
-    display:flex;
+    display: flex;
     flex-direction: column;
   }
 
   .gift-banner__description--desktop {
-  display: none;
-}
- 
+    display: none;
+  }
+
   .gift-banner__description--mobile {
-  display: block;
-}
+    display: block;
+  }
 
-.gift-banner__image-wrapper {
-  position: relative;
-  height: 400px;
-  order: 2;
-  overflow: hidden;
-}
+  .gift-banner__image-wrapper {
+    position: relative;
+    height: 400px;
+    order: 2;
+    overflow: hidden;
+  }
 
-.gift-banner__image {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  object-position: 90% center;
-}
+  .gift-banner__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 90% center;
+  }
 
   .gift-banner__content {
     position: static;
@@ -234,315 +253,53 @@
   }
 
   .gift-banner__strip--desktop {
-  display: none;
-}
+    display: none;
+  }
 
-.gift-banner__strip--mobile {
-  display: block;
-}
-.gift-banner__strip {
+  .gift-banner__strip--mobile {
+    display: block;
+  }
+
+  .gift-banner__strip {
     font-size: 14px;
     line-height: 13.42px;
-    white-space: nowrap; 
-    padding: 20px 0; 
+    white-space: nowrap;
+    padding: 20px 0;
   }
 
   .gift-banner__heading {
     font-size: 36px;
   }
-  .gift-banner__topbar-tagline {
-  display: none;
-}
 
-.gift-banner__topbar-button {
-  display: none;
-}
+  .gift-banner__button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
 
-.gift-banner__topbar {
-  justify-content: center;
-  gap: 12px;
-  padding: 10px 5%;
-  height: auto;
-}
-.gift-banner {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  aspect-ratio: 1440 / 780;
-}
-
-.gift-banner__image-wrapper {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.gift-banner__image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-.gift-banner__description--mobile {
-  display: none;
-}
-.gift-banner__content {
-  position: absolute;
-  bottom: 3%;
-  left: 5%;
-  max-width: 700px;
-  background: rgba(255, 255, 255, 0.85);
-  padding: 20px;
-  z-index: 2;
-}
-
-.gift-banner__heading {
-  font-family: 'Jost', sans-serif;
-  font-weight: 500;
-  font-size: 70px;
-  line-height: 1;
-  letter-spacing: 0px;
-  margin: 0 0 20px;
-}
-
-.gift-banner__description {
-  font-family: 'Jost', sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1.4;
-  letter-spacing: 0px;
-  color: #444;
-  margin-bottom: 30px;
-  max-width: 480px;
-}
-
-.gift-banner__button {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  width: 220px;
-  height: 50px;
-  background: #000;
-  color: #fff;
-  text-decoration: none;
-  font-family: 'Jost', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20.48px;
-  letter-spacing: 0px;
-  text-transform: uppercase;
-  overflow: hidden;
-  transition: gap 0.25s ease, color 0.25s ease;
-  z-index: 1;
-}
-
-.gift-banner__button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: #f4e04d;
-  transition: width 0.35s ease;
-  z-index: -1;
-}
-
-.gift-banner__topbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  width: 100%;
-  height: 64px;
-  padding: 10px 50px;
-  background: #fff;
-  border-bottom: 1px solid #eee;
-  box-sizing: border-box;
-}
-
-.gift-banner__topbar-tagline {
-  white-space: nowrap;
-}
-
-.gift-banner__topbar-brand {
-  font-family: 'Jost', sans-serif;
-  font-weight: 700;
-  font-size: 22px;
-  letter-spacing: 3px;
-  color: #000;
-}
-
-.gift-banner__topbar-tagline {
-  font-family: 'Jost', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 13.42px;
-  letter-spacing: 0px;
-  color: #444;
-}
-
-.gift-banner__topbar-button {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: #f4e04d;
-  color: #000;
-  text-decoration: none;
-  padding: 10px 20px;
-  font-family: 'Jost', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20.48px;
-  letter-spacing: 0px;
-  text-transform: uppercase;
-  overflow: hidden;
-  z-index: 1;
-  transition: color 0.25s ease;
-}
-
-.gift-banner__topbar-button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: #000;
-  transition: width 0.35s ease;
-  z-index: -1;
-}
-
-.gift-banner__topbar-button:hover {
-  color: #fff;
-}
-
-.gift-banner__topbar-button:hover::before {
-  width: 100%;
-}
-
-
-.gift-banner__button:hover {
-  gap: 18px;
-  color: #000;
-}
-
-.gift-banner__button:hover::before {
-  width: 100%;
-}
-
-.gift-banner__button-arrow {
-  transition: transform 0.25s ease;
-}
-
-.gift-banner__button:hover .gift-banner__button-arrow {
-  transform: translateX(4px);
-}
-
-.gift-banner__strip {
-  font-family: 'Jost', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 13.42px;
-  letter-spacing: 0px;
-  text-align: center;
-  padding: 16px 5%;
-  text-transform: uppercase;
-  color: #000;
-  border-top: 1px solid #eee;
-  background: #F5F5F5;
-}
-.gift-banner__strip--mobile {
-  display: none;
-}
-
-@media screen and (max-width: 749px) {
-  .gift-banner {
-    aspect-ratio: auto;
+  .gift-banner__topbar {
+    display: grid;
+    grid-template-columns: 24px 1fr 24px;
+    align-items: center;
+    padding: 10px 5%;
     height: auto;
-    display:flex;
-    flex-direction: column;
   }
 
-  .gift-banner__description--desktop {
-  display: none;
-}
- 
-  .gift-banner__description--mobile {
-  display: block;
-}
+  .gift-banner__topbar-menu {
+    display: flex;
+  }
 
-.gift-banner__image-wrapper {
-  position: relative;
-  height: 400px;
-  order: 2;
-  overflow: hidden;
-}
-
-.gift-banner__image {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  object-position: 90% center;
-}
-
-  .gift-banner__content {
-    position: static;
-    background: none;
-    padding: 20px 5% 0;
-    max-width: 100%;
+  .gift-banner__topbar-brand {
     text-align: center;
-    order: 1;
   }
 
-  .gift-banner__strip--desktop {
-  display: none;
-}
-
-.gift-banner__strip--mobile {
-  display: block;
-}
-.gift-banner__strip {
-    font-size: 14px;
-    line-height: 13.42px;
-    white-space: nowrap; 
-    padding: 20px 0; 
-  }
-
-  .gift-banner__heading {
-    font-size: 36px;
-  }
   .gift-banner__topbar-tagline {
-  display: none;
-}
-
-.gift-banner__topbar-button {
-  display: none;
-}
-
-.gift-banner__topbar {
-  justify-content: flex-start;
-  gap: 12px;
-  padding: 10px 5%;
-  height: auto;
-}
-  .gift-banner__button {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2 ;
+    display: none;
   }
-}
-  .gift-banner__button {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2 ;
+
+  .gift-banner__topbar-button {
+    display: none;
   }
 }
