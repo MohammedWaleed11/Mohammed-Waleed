@@ -28,8 +28,13 @@
 </div>
 
 {% if section.settings.strip_text != blank %}
-  <div class="gift-banner__strip">
+  <div class="gift-banner__strip gift-banner__strip--desktop">
     {{ section.settings.strip_text }}
+  </div>
+{% endif %}
+{% if section.settings.strip_text_mobile != blank %}
+  <div class="gift-banner__strip gift-banner__strip--mobile">
+    {{ section.settings.strip_text_mobile }}
   </div>
 {% endif %}
 
@@ -79,6 +84,12 @@
       "id": "strip_text",
       "label": "Bottom strip text",
       "default": "Sustainable, ethically made clothes in sizes XXS to 6XL"
+    },
+    {
+      "type": "text",
+      "id": "strip_text_mobile",
+      "label": "Bottom strip text (mobile)",
+      "default": "Sustainable, ethically made activewear"  
     }
   ],
   "presets": [

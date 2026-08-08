@@ -23,7 +23,7 @@
 }
 .gift-banner__content {
   position: absolute;
-  bottom: 60px;
+  top: 62.7%;
   left: 5%;
   max-width: 480px;
   background: rgba(255, 255, 255, 0.85);
@@ -90,6 +90,9 @@
   color: #666;
   border-top: 1px solid #eee;
 }
+.gift-banner__strip--mobile {
+  display: none;
+}
 
 @media screen and (max-width: 749px) {
   .gift-banner {
@@ -126,6 +129,14 @@
     text-align: center;
     order: 1;
   }
+
+  .gift-banner__strip--desktop {
+  display: none;
+}
+
+.gift-banner__strip--mobile {
+  display: block;
+}
 
   .gift-banner__heading {
     font-size: 36px;
