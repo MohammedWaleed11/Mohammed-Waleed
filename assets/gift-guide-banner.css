@@ -85,17 +85,15 @@
   .gift-banner {
     aspect-ratio: auto;
     height: auto;
+    display:flex;
+    flex-direction: column;
   }
-.gift-banner__description--desktop {
-  display: none;
-}
 
-.gift-banner__description--mobile {
-  display: block;
-}
+
   .gift-banner__image-wrapper {
-    position: static;
+    position: relative;
     height: auto;
+    order: 2;
   }
 
   .gift-banner__image {
@@ -106,12 +104,19 @@
   .gift-banner__content {
     position: static;
     background: none;
-    padding: 20px 5%;
+    padding: 20px 5% 0;
     max-width: 100%;
     text-align: center;
   }
 
   .gift-banner__heading {
     font-size: 36px;
+  }
+  .gift-banner__button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2 ;
   }
 }
