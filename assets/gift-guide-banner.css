@@ -23,7 +23,7 @@
 }
 .gift-banner__content {
   position: absolute;
-  bottom: 1%;
+  bottom: 3%;
   left: 5%;
   max-width: 480px;
   background: rgba(255, 255, 255, 0.85);
