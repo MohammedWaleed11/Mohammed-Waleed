@@ -72,7 +72,8 @@
 
 .gift-banner__button:hover {
   gap: 18px;
-  background: #222;
+  background: #f4e04d;
+  color: #000;
 }
 
 .gift-banner__button-arrow {
