@@ -23,9 +23,9 @@
 }
 .gift-banner__content {
   position: absolute;
-  top: 62.7%;
+  bottom: 5%;
   left: 5%;
-  max-width: 480px;
+  max-width: 700px;
   background: rgba(255, 255, 255, 0.85);
   padding: 20px;
   z-index: 2;
@@ -54,13 +54,18 @@
 .gift-banner__button {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
+  width: 220px;
+  height: 50px;
   background: #000;
   color: #fff;
   text-decoration: none;
-  padding: 16px 28px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20.48px;
+  letter-spacing: 0px;
   text-transform: uppercase;
   transition: gap 0.25s ease, background 0.25s ease;
 }
@@ -87,7 +92,7 @@
   text-align: center;
   padding: 16px 5%;
   text-transform: uppercase;
-  color: #666;
+  color: #000;
   border-top: 1px solid #eee;
 }
 .gift-banner__strip--mobile {
