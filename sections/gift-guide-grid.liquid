@@ -1,0 +1,111 @@
+{{ 'gift-guide-grid.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'gift-guide-grid.js' | asset_url}}" defer></script>
+<div class="gift-grid">
+  <h2 class="gift-grid__heading">{{ section.settings.heading }}</h2>
+
+  <div class="gift-grid__items">
+    {% for block in section.blocks %}
+      {% assign product = block.settings.product %}
+      {% if product %}
+        <div class="gift-grid__item" {{ block.shopify_attributes }}>
+          <div class="gift-grid__image-wrapper">
+            <img
+              src="{{ product.featured_image | image_url: width: 800 }}"
+              alt="{{ product.featured_image.alt | escape }}"
+              class="gift-grid__image"
+              loading="lazy"
+              width="{{ product.featured_image.width }}"
+              height="{{ product.featured_image.height }}"
+            >
+            <button
+              type="button"
+              class="gift-grid__plus-btn"
+              data-product-handle="{{ product.handle }}"
+              aria-label="Quick view {{ product.title | escape }}"
+            >
+              +
+            </button>
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+    <div class="gift-popup" id="gift-popup" aria-hidden="true">
+    <div class="gift-popup__overlay" data-popup-close></div>
+    <div class="gift-popup__content" role="dialog" aria-modal="true">
+      <button type="button" class="gift-popup__close" data-popup-close aria-label="Close">×</button>
+
+      <div class="gift-popup__top">
+        <div class="gift-popup__image-wrapper">
+          <img src="" alt="" class="gift-popup__image" id="gift-popup-image">
+        </div>
+        <div class="gift-popup__info">
+          <h3 class="gift-popup__title" id="gift-popup-title"></h3>
+          <p class="gift-popup__price" id="gift-popup-price"></p>
+          <div class="gift-popup__description" id="gift-popup-description"></div>
+        </div>
+      </div>
+
+      <div class="gift-popup__details">
+        <div class="gift-popup__option" id="gift-popup-color-wrapper">
+          <p class="gift-popup__option-label">Color</p>
+          <div class="gift-popup__swatches" id="gift-popup-color-swatches"></div>
+        </div>
+        <div class="gift-popup__option" id="gift-popup-size-wrapper">
+            <p class="gift-popup__option-label">Size</p>
+            <select class="gift-popup__size-select" id="gift-popup-size-select">
+                <option value="">Choose your size</option>
+            </select>
+        </div>
+
+        <button type="button" class="gift-popup__add-to-cart" id="gift-popup-add-to-cart">
+          <span id="gift-popup-add-to-cart-text">Add to cart</span>
+          <span class="gift-popup__add-to-cart-arrow">→</span>
+        </button>
+      </div>
+    </div>
+  </div>
+     
+         
+</div>
+
+{% schema %}
+{
+  "name": "Gift Guide Grid",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Tisso vison in the wild"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product_item",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Gift Guide Grid",
+      "blocks": [
+        { "type": "product_item" },
+        { "type": "product_item" },
+        { "type": "product_item" },
+        { "type": "product_item" },
+        { "type": "product_item" },
+        { "type": "product_item" }
+      ]
+    }
+  ]
+}
+{% endschema %}
