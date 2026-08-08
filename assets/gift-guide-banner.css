@@ -144,6 +144,10 @@
 .gift-banner__strip--mobile {
   display: block;
 }
+.gift-banner__strip {
+  line-height: 1.4;
+  padding: 20px 8%;
+}
 
   .gift-banner__heading {
     font-size: 36px;
