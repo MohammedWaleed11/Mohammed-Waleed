@@ -145,9 +145,11 @@
   display: block;
 }
 .gift-banner__strip {
-  line-height: 1.4;
-  padding: 20px 8%;
-}
+    font-size: 14px;
+    line-height: 13.42px;
+    white-space: nowrap; 
+    padding: 20px 0; 
+  }
 
   .gift-banner__heading {
     font-size: 36px;
