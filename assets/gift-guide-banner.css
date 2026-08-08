@@ -127,9 +127,9 @@
   .gift-banner__image {
     height: 100%;
     object-fit: cover;
-    object-position: 60% 85%;
-    width: 200%;
-    max-width: none;
+    object-position: 15% 70%;
+    width: 100%;
+    transform: scale(1.5);
   }
 
   .gift-banner__content {
