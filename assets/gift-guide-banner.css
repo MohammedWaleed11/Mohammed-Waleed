@@ -32,13 +32,20 @@
 }
 
 .gift-banner__heading {
-  font-size: 64px;
-  line-height: 1.1;
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+  font-size: 70px;
+  line-height: 1;
+  letter-spacing: 0px;
   margin: 0 0 20px;
 }
 
 .gift-banner__description {
-  font-size: 18px;
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: 0px;
   color: #444;
   margin-bottom: 30px;
   max-width: 480px;
@@ -72,10 +79,13 @@
 }
 
 .gift-banner__strip {
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 13.42px;
+  letter-spacing: 0px;
   text-align: center;
   padding: 16px 5%;
-  font-size: 12px;
-  letter-spacing: 1px;
   text-transform: uppercase;
   color: #666;
   border-top: 1px solid #eee;
@@ -89,12 +99,13 @@
     flex-direction: column;
   }
 
-  .gift-banner__description--mobile {
-    display: none;
-  }
   .gift-banner__description--desktop {
-    display: block;
-  }
+  display: none;
+}
+ 
+  .gift-banner__description--mobile {
+  display: block;
+}
 
   .gift-banner__image-wrapper {
     position: relative;
@@ -113,6 +124,7 @@
     padding: 20px 5% 0;
     max-width: 100%;
     text-align: center;
+    order: 1;
   }
 
   .gift-banner__heading {
