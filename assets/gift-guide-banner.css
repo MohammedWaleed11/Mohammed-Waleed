@@ -1,4 +1,5 @@
-.gift-banner {
+/*Hero banner container*/
+.gift-banner { 
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -52,7 +53,7 @@
   margin-bottom: 30px;
   max-width: 480px;
 }
-
+/*"Shop now" button*/
 .gift-banner__button {
   position: relative;
   display: inline-flex;
@@ -103,7 +104,7 @@
 .gift-banner__button:hover .gift-banner__button-arrow {
   transform: translateX(4px);
 }
-
+/*Custom top navigation bar - brand name, tagline and second CTA button*/
 .gift-banner__topbar {
   display: flex;
   align-items: center;
@@ -116,7 +117,7 @@
   border-bottom: 1px solid #eee;
   box-sizing: border-box;
 }
-
+/*Hamburger icon visible on mobile view"*/
 .gift-banner__topbar-menu {
   display: none;
   flex-direction: column;
@@ -194,7 +195,7 @@
 .gift-banner__topbar-button:hover::before {
   width: 100%;
 }
-
+/*Bottom info strip - separate for desltop/mobile*/
 .gift-banner__strip {
   font-family: 'Jost', sans-serif;
   font-weight: 400;
@@ -212,7 +213,7 @@
 .gift-banner__strip--mobile {
   display: none;
 }
-
+/*Mobile styles*/
 @media screen and (max-width: 749px) {
   .gift-banner {
     aspect-ratio: auto;
