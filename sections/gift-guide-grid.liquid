@@ -35,15 +35,18 @@
     <div class="gift-popup__content" role="dialog" aria-modal="true">
       <button type="button" class="gift-popup__close" data-popup-close aria-label="Close">×</button>
 
-      <div class="gift-popup__image-wrapper">
-        <img src="" alt="" class="gift-popup__image" id="gift-popup-image">
+      <div class="gift-popup__top">
+        <div class="gift-popup__image-wrapper">
+          <img src="" alt="" class="gift-popup__image" id="gift-popup-image">
+        </div>
+        <div class="gift-popup__info">
+          <h3 class="gift-popup__title" id="gift-popup-title"></h3>
+          <p class="gift-popup__price" id="gift-popup-price"></p>
+          <div class="gift-popup__description" id="gift-popup-description"></div>
+        </div>
       </div>
 
       <div class="gift-popup__details">
-        <h3 class="gift-popup__title" id="gift-popup-title"></h3>
-        <p class="gift-popup__price" id="gift-popup-price"></p>
-        <div class="gift-popup__description" id="gift-popup-description"></div>
-
         <div class="gift-popup__option" id="gift-popup-color-wrapper">
           <p class="gift-popup__option-label">Color</p>
           <div class="gift-popup__swatches" id="gift-popup-color-swatches"></div>

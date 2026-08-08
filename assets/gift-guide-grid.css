@@ -105,12 +105,24 @@
     color: #333;
 }
   
-.gift-popup__image-wrapper {
-    width: 100%; 
-    overflow: hidden;
-    aspect-ratio: 4 / 3;
+.gift-popup__top {
+    display: flex;
+    gap: 16px;
     margin-bottom: 24px;
 }
+
+.gift-popup__image-wrapper {
+    flex: 0 0 140px;
+    width: 140px;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+}
+
+.gift-popup__info {
+    flex: 1;
+    min-width: 0;
+}
+
 
 .gift-popup__image {
     width: 100%;
@@ -125,7 +137,7 @@
 
 .gift-popup__price {
     font-size: 20px;
-    color: #600;
+    color: #000;
     margin: 0 0 16px;
 }
 
