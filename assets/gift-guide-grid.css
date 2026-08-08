@@ -1,7 +1,8 @@
+/* Outer section wrapper*/
 .gift-grid {
     padding: 60px 5%;
 }
-
+/* Section heading ("Tisso vision in the wild)*/
 .gift-grid__heading {
     text-align: left;
     font-size: 36px;
@@ -11,7 +12,7 @@
     line-height: 1.2;
     letter-spacing: 0px;
 }
-
+/*product gtid - 3 columns on desktop, switches to 2 on mobile)*/
 .gift-grid__items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -35,7 +36,7 @@
     object-fit: cover;
     display:block;
 }
-
+/* Circular "+" button - opense the product popup.*/
 .gift-grid__plus-btn {
     position: absolute;
     top: 16px;
@@ -54,10 +55,12 @@
     box-shadow: 0 6px 4px rgba(0, 0, 0, 0.15);
     transition: transform 0.2s ease, background 0.2s ease;
 }
+
 .gift-grid__plus-btn:hover {
     transform: scale(1.1);
     background: #f2f2f2;
 }
+
 @media screen and (max-width: 749px) {
     .gift-grid__items {
         grid-template-columns: repeat(2, 1fr);
@@ -69,6 +72,7 @@
     }
     
 }
+
 .gift-popup {
     position: fixed;
     inset: 0;
@@ -97,6 +101,7 @@
     padding: 32px;
     border-radius: 4px;
 }
+
 .gift-popup__close {
     position: absolute;
     top: 16px;
@@ -134,6 +139,7 @@
     display: block;
     object-fit: cover;
 }
+
 .gift-popup__title {
     font-size: 22px;
     margin: 0 0 8px;
