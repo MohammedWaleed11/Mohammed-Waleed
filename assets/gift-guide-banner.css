@@ -118,19 +118,18 @@
 }
 
   .gift-banner__image-wrapper {
-    position: relative;
-    height: 350px;
-    order: 2;
-    overflow: hidden;
-  }
+  position: relative;
+  height: 350px;
+  order: 2;
+  overflow: hidden;
+}
 
-  .gift-banner__image {
-    height: 100%;
-    object-fit: cover;
-    object-position: 15% 70%;
-    width: 100%;
-    transform: scale(1.5);
-  }
+.gift-banner__image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: left top;
+}
 
   .gift-banner__content {
     position: static;
