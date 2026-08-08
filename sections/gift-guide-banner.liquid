@@ -15,7 +15,8 @@
 
   <div class="gift-banner__content">
     <h1 class="gift-banner__heading">{{ section.settings.heading }}</h1>
-    <div class="gift-banner__description">{{ section.settings.description }}</div>
+    <div class="gift-banner__description gift-banner__description--desktop">{{ section.settings.description }}</div>
+    <div class="gift-banner__description gift-banner__description--mobile">{{ section.settings.description_mobile }}</div>
     <a href="{{ section.settings.button_link }}" class="gift-banner__button">
       {{ section.settings.button_text }}
       <span class="gift-banner__button-arrow">→</span>
@@ -46,6 +47,13 @@
       "label": "Description",
       "default": "<p>Discover Joy: Your Ultimate Holiday Gift Destination.</p>"
     },
+    {
+    "type": "text",
+    "id": "description_mobile",
+    "label": "Description (mobile - shorter)",
+    "default": "Discover Joy: Your Ultimate Holiday Gift Destination."
+    },
+    
     {
       "type": "text",
       "id": "button_text",

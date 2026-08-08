@@ -18,7 +18,9 @@
   object-fit: cover;
   display: block;
 }
-
+.gift-banner__description--mobile {
+  display: none;
+}
 .gift-banner__content {
   position: absolute;
   bottom: 60px;
@@ -84,7 +86,13 @@
     aspect-ratio: auto;
     height: auto;
   }
+.gift-banner__description--desktop {
+  display: none;
+}
 
+.gift-banner__description--mobile {
+  display: block;
+}
   .gift-banner__image-wrapper {
     position: static;
     height: auto;
