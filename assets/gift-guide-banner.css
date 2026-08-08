@@ -117,9 +117,9 @@
   display: block;
 }
 
-  .gift-banner__image-wrapper {
+.gift-banner__image-wrapper {
   position: relative;
-  height: 350px;
+  height: 400px;
   order: 2;
   overflow: hidden;
 }
@@ -128,7 +128,7 @@
   height: 100%;
   width: 100%;
   object-fit: cover;
-  object-position: left top;
+  object-position: 30% center;
 }
 
   .gift-banner__content {
