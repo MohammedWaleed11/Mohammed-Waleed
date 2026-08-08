@@ -119,13 +119,16 @@
 
   .gift-banner__image-wrapper {
     position: relative;
-    height: auto;
+    height: 350px;
     order: 2;
+    overflow: hidden;
   }
 
   .gift-banner__image {
-    height: auto;
-    object-fit: initial;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 85% center;
   }
 
   .gift-banner__content {
