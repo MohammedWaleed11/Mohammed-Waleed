@@ -89,6 +89,12 @@
     flex-direction: column;
   }
 
+  .gift-banner__description--mobile {
+    display: none;
+  }
+  .gift-banner__description--desktop {
+    display: block;
+  }
 
   .gift-banner__image-wrapper {
     position: relative;
